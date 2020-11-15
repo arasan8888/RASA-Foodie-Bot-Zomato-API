@@ -1,5 +1,7 @@
 # RASA-Foodie-Bot-Zomato-API
 
+Train the model and enter Zomato API key for Chatrbot to work
+
 Note: To set up a Gmail address for testing your code, do the following:
 
 Create a new Google account.
