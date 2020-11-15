@@ -1,0 +1,83 @@
+intents:
+- affirm
+- restaurant_search
+- greet
+- goodbye
+- stop
+- deny
+- price_check
+- get_email
+- get_cuisine
+entities:
+- cuisine
+- location
+- price
+- email
+- check_loc
+slots:
+  cuisine:
+    type: text
+  location:
+    type: text
+  price:
+    type: text
+  email:
+    type: text
+  check_loc:
+    type: bool
+responses:
+  utter_ask_cuisine:
+  - buttons:
+    - payload: chinese
+      title: chinese
+    - payload: italian
+      title: italian
+    - payload: south Indian
+      title: south Indian
+    - payload: north Indian
+      title: north Indian
+    - payload: mexican
+      title: mexican
+    - payload: american
+      title: american
+    text: what kind of cuisine would you like?
+  utter_price_preference:
+  - buttons:
+    - payload: below_300
+      title: Lesser than Rs. 300
+    - payload: below_700
+      title: Rs. 300 to 700
+    - payload: above_700
+      title: More than 700
+    text: What price range are you looking at for two people?
+  utter_ask_howcanhelp:
+  - text: how can I help you?
+  utter_ask_location:
+  - text: Please specify the Location for which you are searching restaurants
+  utter_default:
+  - text: Sorry! I am not able to understand.
+  utter_goodbye:
+  - text: Goodbye. See you later.
+  - text: Bye-bye! have a nice day!
+  utter_greet:
+  - text: hey there! How may i help you
+  - text: Hi, How can I help you!
+  - text: Hey, How is it going. How May I help you Today
+  utter_locationNotServiced:
+  - text: Sorry, we do not operate in that area yet.
+  - text: Oops, Seems like our service does not cover this location.
+  utter_enterEmail:
+  - text: Please enter your email address.
+actions:
+- action_search_restaurants
+- utter_ask_cuisine
+- utter_ask_howcanhelp
+- utter_ask_location
+- utter_default
+- utter_goodbye
+- utter_greet
+- action_t1t2_location
+- utter_price_preference
+- utter_enterEmail
+- utter_locationNotServiced
+- send_email
